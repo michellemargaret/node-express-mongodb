@@ -170,7 +170,7 @@ exports.update = (req, res) => {
         res.status(404).send({
           message: `Cannot update ListItem with id=${id}. Maybe ListItem was not found!`,
         });
-      } else res.send({ message: "ListItem was updated successfully." });
+      } else res.send(data);
     })
     .catch((err) => {
       res.status(500).send({
